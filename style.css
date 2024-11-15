@@ -1,0 +1,187 @@
+*{
+    margin: 0;
+    padding : 0;
+    box-sizing: border-box;
+}
+
+
+html , body {
+    width : 100%;
+    height : 100%;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    color: white;
+}
+
+nav i{
+    display: none;
+}
+
+nav{
+    width : 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding : 1vw 2vw;
+    position : fixed;
+    top :0;
+}
+
+nav img{
+    height : 8vh;
+}
+
+nav ul{
+    display: flex;
+    gap : 4vw;
+}
+nav ul a{
+    font-size : 2.6vh;
+    text-decoration: none;
+    color : white;
+    font-weight: 500;   
+}
+
+nav button {
+    padding : 1vw 3vw;
+    font-size: 1vw;
+    border-radius: 25px;
+    font-weight: 600;
+    color : black;
+    background-color: white;
+    border : none;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+nav button:hover {
+    background-color: blueviolet;
+}
+
+
+.page1{
+    height : 100%;
+    width : 100%;
+    background-color: black;
+}
+
+.page1 .empty{
+    height : 10%;
+    width : 100%;
+}
+
+.page1 .content {
+    width : 100%;
+    height : 90%;
+     display: flex;
+     align-items: center;
+     justify-content: space-evenly;
+    overflow-x: scroll;
+   white-space: nowrap;
+}
+/* .page1 .content {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap; 
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden; 
+
+} */
+
+
+.page1 .content .card{
+    width : 45vh;
+    height : 80%;
+    padding : 3vh;
+    border : 2px solid white;
+    border-radius: 2vh;
+    background-color: rgb(37, 37, 37);
+    display: inline-block;
+    margin : 0 2vh;
+    transition : 0.25s linear;
+    /* white-space: wrap; */
+}
+
+.page1 .content  .card:hover{
+    scale: 1.1;
+}
+
+
+
+.page1 .content .card h1:first-child{
+   font-weight : 600;
+   color : aquamarine;
+   padding : 1vh 0;
+}
+.page1 .content .card p{
+   font-size : 2vh;
+   line-height : 3vh;
+}
+.page1 .content .card .price{
+    display: flex;
+    padding : 3vh;
+   
+}
+.page1 .content .card .price sup{
+   font-size: 5vh;
+   font-weight: 600;
+   color: aquamarine;
+}
+.page1 .content .card .price h1{
+   font-size: 10vh;
+   font-weight: 600;
+}
+.page1 .content .card button{
+  font-size: 2vh;
+  width : 90%;
+  padding : 1.5vh 0;
+  border-radius : 25px;
+  background-color: rgb(61, 61, 61);
+  color : white;
+  border : none;
+  transition : 0.25s linear;
+}
+
+.page1 .content .card button:hover{
+    background-color: azure;
+    color: black;
+}
+.page1 .content .card .check{
+  padding : 5vh 0;
+  width : 100%;
+}
+.page1 .content .card .check p{
+  padding : 2vh 0;
+  width : 100%;
+  border-bottom : 1px solid white;
+}
+
+
+
+
+@media (max-width : 600px){
+    nav ul{
+        display: none;
+    }
+
+    nav i{
+        display: initial;
+    }
+
+    nav button{
+        margin-left: 30%;
+        font-size: 3.5vw;
+     }
+
+    .page1 .content .card {
+        margin : 2vh 0;
+    }
+    .page1 .content  .card:hover{
+        scale: 1;
+    }
+}
